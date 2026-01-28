@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes, initial-scale=1.0" />
+  <title>Qinghai Zhong - Conferences</title>
+
+  <style>/* noto-sans-regular - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/smertnig/fonts/noto-sans-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans'), local('NotoSans'),
+       url('/smertnig/fonts/noto-sans-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/smertnig/fonts/noto-sans-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/smertnig/fonts/noto-sans-v7-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+/* noto-sans-700 - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/smertnig/fonts/noto-sans-v7-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+       url('/smertnig/fonts/noto-sans-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/smertnig/fonts/noto-sans-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/smertnig/fonts/noto-sans-v7-latin-700.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+/* noto-sans-700italic - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/smertnig/fonts/noto-sans-v7-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'),
+       url('/smertnig/fonts/noto-sans-v7-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/smertnig/fonts/noto-sans-v7-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/smertnig/fonts/noto-sans-v7-latin-700italic.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+/* noto-sans-italic - latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/smertnig/fonts/noto-sans-v7-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'),
+       url('/smertnig/fonts/noto-sans-v7-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/smertnig/fonts/noto-sans-v7-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('/smertnig/fonts/noto-sans-v7-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/smertnig/fonts/noto-sans-v7-latin-italic.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+html {
+  /* ensure that the vertical scroll-bar is always present;
+   * otherwise there are jumps of the layout when switching from a
+   * very short page to a longer one */
+  overflow-y: scroll;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", "Open Sans", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 165%;
+  color: #202020;
+  background: #888;
+}
+
+h1 {
+  font-size: 135%;
+  font-weight: bold;
+  color: #1f75cc;
+  letter-spacing: 0.02em;
+  margin-top: 1em;
+}
+
+h2 {
+  font-size: 115%;
+}
+
+h3 {
+  font-size: 100%;
+  margin-bottom: 0pt;
+  margin-top: 1em;
+}
+
+/* Page header */
+
+div#header {
+  margin-bottom: 1em;
+}
+
+@media all and (max-width: 400px) {
+  div#header-name {
+    text-align: center;
+  }
+}
+
+div#header-name {
+  font-size: 200%;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 110%;
+  padding: 0.3em 0em 0.2em 0em;
+  margin-bottom: 0em;
+  color: #1f75cc;
+}
+
+span#header-sub {
+  font-size: 75%;
+  letter-spacing: 0.05em;
+}
+
+div#header-institute {
+  font-size: 84%;
+}
+
+/* For titles on e.g. course page */
+div#header-course {
+  font-size: 200%;
+  font-weight: bold;
+  line-height: 110%;
+  padding: 0.3em 0em 0.2em 0em;
+  margin-bottom: 1em;
+  color: #1f75cc;
+}
+
+@media all and (max-width: 400px) {
+  div#header-institute {
+    text-align: center;
+  }
+}
+
+/* Navigation */
+
+div#nav {
+  border-bottom: 1px solid #888888;
+  overflow: hidden;
+}
+
+div#nav div {
+  float: left;
+  padding: 0.04em 0.5em;
+  margin-right: 0.25em;
+  margin-bottom: -1px;
+  border: 1px solid #888888;
+}
+
+div#nav div:hover {
+  background: #1f75cc;
+  color: white;
+}
+
+div#nav div.active {
+  background: #1f75cc;
+  color: white;
+}
+
+div#content-container {
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+div#content {
+  width: 91%;
+  padding: 1.5em 4.5%;
+  margin: 0;
+  background: #ffffff;
+  box-shadow: 0em 0.125em 0.5em #222;
+}
+
+div#photo {
+  float: right;
+  margin: 1em 0.5em 0.5em 0.5em;
+}
+
+@media all and (max-width: 400px) {
+  div#photo {
+    float: none;
+    text-align: center;
+  }
+}
+
+div#footer {
+  font-size: 84%;
+  text-align: right;
+  color: #888;
+  margin-top: 2em;
+}
+
+dl#contact dt {
+  min-width: 5em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  float: left;
+  clear: left;
+}
+
+dl#contact dd {
+  float: left;
+  margin: 0 0 0 0.4em;
+}
+
+.clearer {
+  clear: both;
+}
+
+/* General lists */
+
+ul, ol {
+  margin-top: 5pt;
+}
+
+/* Links */
+a:link {
+  color: #1f75cc;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1b66b1;
+}
+
+a:hover {
+  color: red;
+}
+
+div#header-institute a:link {
+  text-decoration: none;
+  color: #000;
+}
+
+div#header-institute a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+div#header-institute a:hover {
+  color: red;
+}
+
+/* Publications */
+ol.pub {
+  color: #888888;
+}
+
+.pub li {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  padding-left: 0.25em;
+}
+
+.pub .entry {
+  color: #000000;
+}
+
+.pub .links {
+  font-size: 84%;
+  padding-left: 1em;
+  width: 11em;
+  color: black;
+  float: right;
+}
+
+.pub .links .res,
+.pub .links .res:hover {
+  background: #aaa;
+  color: #fff;
+  padding: 0.1em 0.25em 0.1em 0.25em;
+}
+
+.pub .links .res:hover {
+  background: #1f75cc;
+}
+
+.pub .links .res a {
+  color: #fff;
+}
+
+ .pub .small {
+  font-size: 84%;
+}
+
+/* Conferences */
+.conf li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.conf {
+  color: #888;
+}
+
+.conf .entry {
+  color: #000;
+}
+
+.conf .title {
+  font-style: italic;
+}
+
+.conf .session {
+  font-style: italic;
+}
+
+/* Teaching */
+.teaching li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.teaching {
+  color: #888;
+}
+
+.teaching .entry {
+  color: #000;
+}
+
+a.ugocourse {
+  background-image: url('images/ugo_icon.png');
+  background-repeat: no-repeat;
+  background-position: 0px 4px, top;
+  padding-left: 20px;
+}
+
+a.tugcourse {
+  background-image: url('images/tugonline.gif');
+  background-repeat: no-repeat;
+  background-position: 0px 4px, top;
+  padding-left: 86px;
+}
+
+@media all and (max-width: 400px) {
+  ol, ul {
+    padding-left: 0.8em;
+    padding-right: 0;
+  }
+}
+
+/* Course description */
+dl.course-desc dt {
+  min-width: 9em;
+  margin-bottom: 0.25em;
+  float: left;
+  clear: left;
+}
+
+dl.course-desc dd {
+  float: left;
+  margin: 0 0 0 0.4em;
+}
+
+/* Group list for a course */
+
+table.groups {
+  max-width:50em;
+  margin: 1em auto;
+}
+
+table.groups td, table.groups th {
+  padding: 0em 0.5em;
+}
+
+/* Literature list for a course (different formatting from publications page) */
+.lvliteratur li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding-left: 0.25em;
+}
+
+.lvliteratur .title {
+  font-style: italic;
+}
+
+.lvliteratur .bib {
+  font-size: 84%;
+}
+
+/* Footnote */
+div.footnotes {
+  margin-top: 3em;
+}
+
+.footnote {
+  font-size: 84%;
+}
+
+/* Course content list */
+dl.course-content dt {
+  padding-top: 0.25em;
+  width: 5.75em;
+  margin-bottom: 0em;
+  float: left;
+  clear: left;
+}
+
+dl.course-content dd {
+  padding-top: 0.25em;
+  margin: 0 0 0 5.75em;
+}
+
+@media all and (max-width: 400px) {
+  dl.course-content dd {
+    margin-left: 0.75em;
+  }
+}
+</style>
+  <link rel="canonical" href="https://imsc.uni-graz.at/zhong/conferences.html" />
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+  
+</head>
+
+<body>
+  <div id="content-container">
+  <div id="content">
+    <div id="header">
+    
+      <div id="photo">
+                      <a href="http://www.fwf.ac.at"><img src="data:image/png;base64,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" width="207" height="65" alt="FWF Logo" /></a>
+                      &nbsp;
+                      <a href="http://www.uni-graz.at"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABGCAIAAADQCVRBAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4gAAAuIAHVHB4bAAAAB3RJTUUH3wIJCzosM1BFywAACf9JREFUeNrlXHuMVNUd/r5z787Awu4CRreKqDRiCZoWC7WKpiq+4kYTW6gan5EQH6TGRku7wZJaq8ZGC4pNaRWt2to2qYBtrVGrtokPENNUUbFNBWVReehqFxZmdmbO+frH3Dv3MXdBdJdddk82m91z75zH7/n9fud3hi+uWg0BAIigCSCCznhj7Gm8KflC6p3aaOHvYOx4f2q02uxEdst8mlw2GdtBXafpdVxGP2Q4Yrju4NO16ZmkFOuIVftbSXoyOZSyqNzb2lIfZOyDqT0zeKqw14+IJKjaHd+AQMLFx3XhoA5g+FvxVZqAmlnMJKO54wtK0yglbnHRYB3blUUjpSWUdFWqk/Bro4wePaplTIukOCFg6qQ0HCuxsKjfoLgW3X8D/CwJTm2nN+3K1Jbdtz28SdquyvTuypGAJPjBh6SWlubDJ0zA52+fPI7yXZ92tfusERuL1++wRxEWgqlRXOqjCWQwCJsgeTUSmLQ1HvJNcUvOobCZTyntqOn2ft+4N9QhzGDhs/Ypgcx+xq4+IrEZeNXWPp+JVZQ2sIac+3wmVXWbw8SBqQbnzMA7bQ2AXJkohNKQF/IoMvEHZvoBlKzAgWn4gFORNSHn3oR3+zmUq4VbZriId5Azieu2hk0Epnjgyf1w6Z/ZjhNRmoH70c77YqkBJtewSTMwCjw1fKxaPE/Oob7LOpRm+sGGc/AagnR2Rf1H4cFoDv04Uh0+ym16PegbilwnaqEIUXPiQ1jHE4xgldsaTvKtGrc5TOJtMgKnwykUUSIUGT6xZ+TANHwyp9E2TVCUMeRhaZLhJl1MMuTkOd2pqpBzOEVfYcmRGSSGvGJRqaBSQcUm+p0L+yuBHe7YnMFJKXrNCQCsjXrqBcAfFChyBC64xnt/GyWNb8WKX1nsCp6sfJZ3PGhIWqcl7e74qZp1vTfpMPzuTgsbbee9LTjnO15jnoWSbrvOtZ2pG28zz75Mz8A5rHnMohAJuQaLJSc+/B+2fgwJ+XyCmYUebu0EKOdQKgNEsYQXX+Xl7d7ShbaxEXAAUHHY+hEbR6pQZLEHMOjqxrZOGA/OJiufapa8lkgdYAOUndkSSMZElIJn9I9/YuZcr2t7ynYzJbxMVbExfqzPvma2+tD+pkOl6to9cmsnzrvOdGxmeKJFQGIdDxmr8VP8xLPPzRo/G6EylE1BfWqUEqgdUhN89wO2zTNv/Ye1NymmIw8luB87A6svahwgB9MLr8WY9CpasQjsKnL2DWb1a/S9zDxRulSzSqHBUrLDiOG9UKOOMTUBKRSx8B4vn0vXHdchksiADJaSHScSBLG9O7YootDDlBpWN+OkQ1t5xPhqdTCtFNZBpwudVU/gwXIYJBw4NpDAbZ18e124pByeeJ6kBEka0xzpucSxzXpyqW0aBQmhcickRhIgZp34mEEh42WcfZKTAGhEXnMWeo8+zade4tU/NC+/HlSHj27ElycnpBVArgWv/N5OnSxrGZmAlCJkmWqjwZDuszjnZLQ0BYvYtBXfX2Tm3eI9/ZIZkROgYolL2l1oAKplwYEE53NYucROm+KsjSx/UrdVb99M3M8PTCQIADi4VXe3u3wO1jEoZldV59Fd4LwL3OkzVEWjGSDDYcXP3ewzVexJizSR8OMKSzfMvq8K643hp0zX8w/aYybJOYZXHNQ8issX2YXzXBWE9oowKvjZAnfdJa5U1u6cYvgPX1y1uqr94w855IjDD+uD7W2/D51XfkbxITACn7yD9ZtoHQ4ap4lHAQaIhWWFj4MYq8FHbkySBj7efpMTWpUfB9uFYikg3ugDAeCD7fPf6T6ftGFSqU91+09Pdd92K/INXuBuq0EPg5ghuIURYG0EfgehtoawUTGEzhBiqg62R9c4YtcAAgQfoDawGr1a+81vF78xE07VIo6+PgPr3qWOzcjnU4KVumtS969QrnDehe7k6RqRw/pNuHe5ebsDlQq/e4n7ypdkHQD0lPDYc+a5NfAMBEoa3YgrZ7s7H/Q8DwBaD9Ct17pyFGPD83jZAuMRO3aC4Z0ev8+RKSlDGAaulMk9KwKJ8Zs4MB5W3l05dgoqJThh2hSce4qdcam3rRPTpmjmDNkynINncF6bPXuOt249PINCmXdcb9vO0gMr1dUNQzQ14vQTVC4HWgDi9mXI5SQbwRmgujz1h+1SEihG1GX0RlBAIvC0r+PYKVizljPnetMv9G/6pfnenaZrR2iJG7D4YXPcRf7Vtxh4aJ/jekoA9LUpajtVKOPXN9tSmQA3bsYJF3snXe5d1O45h22d+M1fjG+YjreVBV77wlMlr8MpYGwUOddcjVQq68wZDjksepibtsBavPIGN27hMZNkbSAWpTK2d2tcMwAUisGSrz7flYt49K+cOhknThUga7G1kx2bedd8Z0bhqh97Owusz5L6aR/fl5tP3Y6kIncSQI5wZnoRSubkiVq+2CIHNGLkJB8ESlgwzy24FnB497/4yb1eQ4MmHKy20/T4M/ztE2b22faK89yqtSbnA8AP5rjxh2rZI1zzJvMNGQ6sPw96g6wNYy6UscixqvkkkPPxzGqihPlXaEyz3tyAmXM9EO/9G54X3MJ77Q2+sIooYd16bv4QlQrvv0mo4JyZemyphUPbWfrieDiHMU2Y+y3X3YWH/mzGNmHUyLp7hoEl7xeUFvNLRAQno2RHdFGR1LMv87W3+NVpeuEhu2MnvnAwUMa1t3ujRoIEGvDHp7lsBf++zLWdoUvXug3v48iJenUd719BAGObcfMN7v6b7YmX+ssXV0Y3w/Zg+SJriJYmjD/NzzXEfF6Qj2G/Jo0lgXVqr3ikBPSUcNY13o+ucrPOcPkc/vU6blzivbUBvsGWj7ClAzsL8D3OusE8udTOneXWb+KGjfjFH8wzqwHAMzz1OB3aqsvOda0H4J13kzmlWs6FgZj52ddwPx+foyp9MsxPqirSSqLFmPdkYx633sefPuA3NGhXgQ0+aJTPaf5iYy1zvnINKBR5/MW+IM/QCb4n3yMg63RJuyfJ9/HIEx7JmrsU0DSSpXIsNRFx2/UP+pbq0kNxfBUXeAmoiqK1zOci0cj5kF+1CyI5Iq/IOka3tJnPBUT0fcZ1qjqyktm5SLf7qv5SzpVLMMZ+CreWzoXs0cgoC5kihfhqgDc2ZrkE52xt1gClUezq2r6xY1PAIGVgStaImDkbAMHzvAMOmjj3qmt8z9srL7eHFNveA4aU87TOHn30dCcXeJhqBBamVhWcFjCWl2DvMXOKNNX6CM8YZl1b7w2P7z4iYNatdPby9x7SdZJzIbdjZA8sgYmhycxoObZ01gBY+FUFkpxsbyKzZ+bWubzEdzkk3S9TOYe6G/q9tUR2hVlJxvSjZH2PkME3Zc7KjLOo1NcKKAvvZOfDFMuzqO7rCVICUmdO/g/Saq88qPRTVQAAAABJRU5ErkJggg==" width="82" height="70" alt="Uni Graz Logo" /></a>
+                    </div>
+    
+    
+    
+      <div id="header-name">Qinghai Zhong</div>
+
+      <div id="header-institute">
+             <a href="https://mathematik.uni-graz.at/en/">Institute for Mathematics and Scientific Computing</a> &bull; <a href="https://www.uni-graz.at/en/">University of Graz</a>
+           </div>
+           
+    </div>
+
+    <div id="nav">
+      
+      <a href="././index.html"><div class="inactive">Home</div></a>
+      
+      <a href="././publications.html"><div class="inactive">Publications</div></a>
+      
+     
+      <a href="././conferences.html"><div class="active">Conferences</div></a>
+      
+      
+       <a href="././CV-zhong.pdf"><div class="inactive">CV</div></a>
+      
+    </div>
+
+    <div class="clearer"></div>
+    
+ 
+
+    
+    
+    
+    
+    
+<h1> Organization of Conferences </h1>
+
+<ul>
+
+<li>
+<div>
+ <span><a href="http://additive2016.uni-graz.at/en/announcement">Combinatorial and Additive Number Theory</a></span><br/>
+  <span>Graz, January 4 -- 8, 2016</span> <br/>
+  <span>jointly with A. Geroldinger, A. Reinhart, and D. Smertnig.</span>
+  </div>
+</li>
+
+
+
+
+<li>
+<div>
+<a href="http://imsc.uni-graz.at/rings2018/">Conference on Rings and Factorizations</a><br/> 
+Graz, February 19 -- 23, 2018<br/> 
+jointly with A. Geroldinger, J. Oh, and S. Tringali.
+</div>
+</li>
+</ul>   
+    
+    
+    
+    
+
+ 
+
+<h1>Conferences, Seminars, and Research stay</h1>
+
+<ul>
+
+<li>   Research stay at Nanjing University(China), invited by Prof. Zhi-Wei Sun<br/>
+        Nanjing, China,  May 27-June 2, 2019<br/>
+       <i> Talk:  On product-one sequences over Dihedral groups and Dicyclic groups</i>
+   </li>  
+
+
+<li>   <a href="https://www.fmf.uni-lj.si/si/obvestila/49466/">Seminar for algebra and functional analysis</a><br/>
+        University of Ljubljana, Slovenia,  December 20, 2018<br/>
+       <i> Talk:  Factorization theory in Krull monoids</i>
+   </li>  
+
+
+
+<li>   <a href="https://imsc.uni-graz.at/AlgNTh/Timetable.html">Algebra and Number Theory Seminar</a><br/>
+        Uni Graz, Austria,  October 18, 2018<br/>
+       <i> Talk:  On the arithmetic of C-monoids and domains   </i>
+   </li>  
+
+
+<li> <a href="http://www.ams.org/meetings/international/2258_special.html"> AMS Special Session: Additive Combinatorics including its interplay with factorization theory</a><br/>
+ Fudan University, Shanghai, China, June 11-14, 2018<br/>
+<i> Talk: Krull monoids and Additive Combinatorics</i>
+</li>
+
+<li>   Research stay at Sichuan Normal University(China), invited by Prof. Fanggui Wang<br/>
+        Chengdu, China,  June 6, 2018<br/>
+       <i> Talk: <a href="http://cs1.cdakr.com/details/24_19463"> Factorization theory in Krull monoids</a></i>
+   </li>  
+
+
+
+<li>   Research stay at Sichuan University(China), invited by Prof. Shaofang Hong<br/>
+        Chengdu, China,  June 4-June 8, 2018<br/>
+       <i> Talk: <a href="http://math.scu.edu.cn/info/1062/3123.htm">Every transfer Krull monoid is fully elastic</a></i>
+   </li>  
+
+<li>   Research stay at Nankai University(China), invited by Prof. Weidong Gao<br/>
+        Tianjin, China,  May 25-June 3, 2018<br/>
+       <i> Talk: Combinatorial Factorization Theory in transfer Krull monoids</i>
+   </li>  
+
+
+<li>   <a href="https://imsc.uni-graz.at/AlgNTh/Timetable.html">Algebra and Number Theory Seminar</a><br/>
+        Uni Graz, Austria,  April 26, 2018<br/>
+       <i> Talk:  Sets of arithmetical invariants in transfer Krull monoids   </i>
+   </li>  
+
+<li>   <a href="https://imsc.uni-graz.at/AlgNTh/Timetable.html">Algebra and Number Theory Seminar</a><br/>
+        Uni Graz, Austria,  November 16, 2017<br/>
+       <i> Talk:  Long sets of lengths with maximal elasticity   </i>
+   </li>  
+
+<li> <a href="http://www.math.unicaen.fr/lmno/JA2017/english.php">  30th Journées Arithmétiques</a><br/>
+  University of Caen, Caen, France,  July 3-7, 2017<br/> 
+   <i>Talk: The set of  minimal distances and Characterization of class groups</i>
+</li>
+     
+<li> <a href="http://www.cmls.polytechnique.fr/perso/plagne/JPCA.htm"> Palaiseau Days on Additive Combinatorics</a> <br/>
+   Ecole polytechnique, Pari, France,  June 29-30, 2017 <br/>
+<i>Talk: The set of  minimal distances and Characterization of class groups in Krull monoids</i>
+</li>
+
+<li>   <a href="https://imsc.uni-graz.at/AlgNTh/Timetable.html">Algebra and Number Theory Seminar</a><br/>
+          Uni Graz, Austria,  October 27, 2016<br/>
+   <i> Talk:  Sets of minimal distances and Characterizations of class groups  of Krull monoids</i>
+    </li>
+     
+<li>   <a href="https://imsc.uni-graz.at/AlgNTh/Timetable.html">Algebra and Number Theory Seminar</a><br/>
+        Uni Graz, Austria,  April 21, 2016<br/>
+       <i> Talk:  The set of distances in seminormal weakly Krull monoids  </i>
+   </li>  
+
+
+<li>  <a href="http://www.hri.res.in/~ntm2016/">Triveni Number Theory Meet @ HRI</a><br/>
+  HRI,  Allahabad,  India, March  4–8,  2016<br/>
+      <i>Talk:  Sets of lengths in Krull momoids</i>
+      </li>
+      
+      
+     
+<li>   <a href="https://imsc.uni-graz.at/AlgNTh/Timetable.html">Algebra and Number Theory Seminar</a><br/>
+        Uni Graz, Austria,  October 29, 2015<br/>
+       <i> Talk:  A characterization of class groups via sets of lengths   </i>
+   </li>  
+     
+<li> <a href="https://conferences.cirm-math.fr/1107.html">  Additive Combinatorics in Marseille</a><br/>
+ CIRM, Marseille, France,  September 7 – 11, 2015 <br/>
+      <i>Talk: The set $\Delta^*(G)$ of minimal distances</i>
+    </li>
+    
+     
+<li> <a href="http://ja2015.math.unideb.hu/"> 29th Journées Arithmétiques</a><br/>
+     University of Debrecen, Debrecen, Hungary, July 5-10, 2015<br/>
+ <i> Talk: The set of minimal distances in Krull monoids</i>
+    </li>
+</ul>
+
+
+
+
+
+
+    <div id="footer">Last changed: 2018-11-23</div>
+  </div>
+  </div>
+</body>
+</html>
